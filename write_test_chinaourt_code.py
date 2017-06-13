@@ -40,7 +40,7 @@ def chinacourt(name, url, db_number):
     with open(html_file_path, 'wb') as html:
         html.write(page_body.encode('utf-8'))
     click.echo("Download html file success!")
-    with open('templates/test_chinacourt.py', 'r') as chinacourt:
+    with open('/home/laixintao/program/test-yorg/templates/test_chinacourt.py', 'r') as chinacourt:
         content = chinacourt.read()
         content = content.format(package=package, testname=testname, html_path=html_path, data_num=1, url=url)
         with open(test_path, 'w') as test_file:
