@@ -1,0 +1,4 @@
+{"index":"basic"}
+{"query":{"bool":{"should":[{"match_phrase":{"name":"深圳市鑫卓越科技有限公司"}},{"match_phrase":{"former_name":"深圳市鑫卓越科技有限公司"}}]}}}
+{"index":"basic"}
+{"query":{"bool":{"should":[{"match_phrase":{"name":"利兴迪物流（深圳）有限公司"}},{"match_phrase":{"former_name":"利兴迪物流（深圳）有限公司"}}]}}}

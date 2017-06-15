@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-MONGONAME='local_courts'
-START_JOB="from yorg.contrib.court.provincial_capital.wuxi.jiangyin import start_job; start_job()"
+MONGONAME='neimenggu'
+START_JOB="from yorg.contrib.court.neimenggu.alashan import start_job; start_job()"
 
 YORG_DIR='~/program/yorg/'
 TEST_YORG_PATH=~/program/test-yorg/
