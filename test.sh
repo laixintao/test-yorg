@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-MONGONAME='neimenggu'
-START_JOB="from yorg.contrib.court.neimenggu.alashan import start_job; start_job()"
+MONGONAME='purchase'
+START_JOB="from yorg.contrib.purchase.cebpub import start_job; start_job()"
 
 YORG_DIR='~/program/yorg/'
 TEST_YORG_PATH=~/program/test-yorg/
