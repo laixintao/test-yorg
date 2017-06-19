@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from yorg.utils import task_putter
 from yorg.utils import fully_qualified_func_name
 from yorg.contrib.court.chinacourt import get_page_num, parse_detail_page, parse_list_page
-from yorg.utils.decorators import queue_job
 
 URL_BASE = "http://jkxfy.chinacourt.org"
 COURT = "交口县人民法院"
