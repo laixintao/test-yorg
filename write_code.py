@@ -38,6 +38,8 @@ def test_chinacourt(name, url, db_number):
         html_file_path = '/home/laixintao/program/yorg/tests/data/court/test_court_{}_detail_page.html'.format(*name)
         test_path = '/home/laixintao/program/yorg/tests/court/test_{}.py'.format(*name)
     data_num = db_number
+    # remove _
+    testname = testname.replace('_', '')
     with open(html_file_path, 'wb') as html:
         html.write(page_body.encode('utf-8'))
     click.echo("Download html file success!")

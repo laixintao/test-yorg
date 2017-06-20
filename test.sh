@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-MONGONAME='purchase'
-START_JOB="from yorg.contrib.court.hunan.yueyang_zhongji import start_job; start_job()"
+MONGONAME='shaanxi'
+START_JOB="from yorg.contrib.court.shaanxi.xian_yanliang import start_job; start_job()"
 
 YORG_DIR='~/program/yorg/'
 TEST_YORG_PATH=~/program/test-yorg/
