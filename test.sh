@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-MONGONAME='shaanxi'
-START_JOB="from yorg.contrib.court.shaanxi.xian_yanliang import start_job; start_job()"
+MONGONAME='guangdong'
+START_JOB="from yorg.contrib.court.guangdong.gdcourts import start_job;  start_job(2017)"
 
-YORG_DIR='~/program/yorg/'
+YORG_DIR='/Users/laixintao/Program/yorg/'
 TEST_YORG_PATH=~/program/test-yorg/
 cd $YORG_DIR
 echo you are now in `pwd`
@@ -24,8 +24,8 @@ beanstalkd &
 echo OK
 
 echo start_job ...
-/home/laixintao/.virtualenvs/yorg/bin/python -c $START_JOB
+/Users/laixintao/.virtualenvs/yorg/bin/python -c $START_JOB
 echo start_job finished
 
 echo start_yorg
-/home/laixintao/.virtualenvs/yorg/bin/yorg
+/Users/laixintao/.virtualenvs/yorg/bin/yorg

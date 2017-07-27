@@ -28,22 +28,22 @@ def test_chinacourt(name, url, db_number):
     if len(name) == 2:
         package = "{}.{}".format(*name)
         testname = "{}{}".format(*[n.capitalize() for n in name])
-        html_file_path = '/home/laixintao/program/yorg/tests/data/court/test_court_{}_{}_detail_page.html'.format(*name)
+        html_file_path = '/Users/laixintao/Program/yorg/tests/data/court/test_court_{}_{}_detail_page.html'.format(*name)
         html_path = '"data/court/test_court_{}_{}_detail_page.html"'.format(*name)
-        test_path = '/home/laixintao/program/yorg/tests/court/test_{}_{}.py'.format(*name)
+        test_path = '/Users/laixintao/Program/yorg/tests/court/test_{}_{}.py'.format(*name)
     else:
         package = name[0]
         testname = name[0].capitalize()
         html_path = '"data/court/test_court_{}_detail_page.html"'.format(*name)
-        html_file_path = '/home/laixintao/program/yorg/tests/data/court/test_court_{}_detail_page.html'.format(*name)
-        test_path = '/home/laixintao/program/yorg/tests/court/test_{}.py'.format(*name)
+        html_file_path = '/Users/laixintao/Program/yorg/tests/data/court/test_court_{}_detail_page.html'.format(*name)
+        test_path = '/Users/laixintao/Program/yorg/tests/court/test_{}.py'.format(*name)
     data_num = db_number
     # remove _
     testname = testname.replace('_', '')
     with open(html_file_path, 'wb') as html:
         html.write(page_body.encode('utf-8'))
     click.echo("Download html file success!")
-    with open('/home/laixintao/program/test-yorg/templates/test_chinacourt.py', 'r') as chinacourt:
+    with open('/Users/laixintao/Program/test-yorg/templates/test_chinacourt.py', 'r') as chinacourt:
         content = chinacourt.read()
         content = content.format(package=package, testname=testname, html_path=html_path, data_num=1, url=url)
         with open(test_path, 'w') as test_file:
@@ -55,10 +55,10 @@ def test_chinacourt(name, url, db_number):
 @main.command()
 @click.option('--path', '-p')
 def chinacourt(path):
-    dir_path = '/home/laixintao/program/yorg/yorg/contrib/court/{}/'.format(path)
+    dir_path = '/Users/laixintao/Program/yorg/yorg/contrib/court/{}/'.format(path)
     if not os.path.isdir(dir_path):
         os.system('mkdir -p {}'.format(dir_path))
-    with open('/home/laixintao/program/test-yorg/templates/chinacourt.py', 'r') as chinacourt:
+    with open('/Users/laixintao/Program/test-yorg/templates/chinacourt.py', 'r') as chinacourt:
         with open(dir_path+'__init__.py', 'w') as code:
             code.write(chinacourt.read())
 
