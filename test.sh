@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-MONGONAME='guangdong'
-START_JOB="from yorg.contrib.court.guangdong.gdcourts import start_job;  start_job(2017)"
+MONGONAME='gov_info'
+START_JOB="from yorg.contrib.court.guangdong_courts.huizhou.huidong import start_job; start_job()"
 
-YORG_DIR='/Users/laixintao/Program/yorg/'
+YORG_DIR='/Users/laixintao/Program/yorg/'.
 TEST_YORG_PATH=~/program/test-yorg/
 cd $YORG_DIR
 echo you are now in `pwd`
